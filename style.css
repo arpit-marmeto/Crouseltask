@@ -1,0 +1,217 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.dropdown-container {
+  position: absolute;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#position-dropdown {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #FFA62F;
+  border-radius: 5px;
+  background-color: #FFF;
+  color: #333;
+  cursor: pointer;
+}
+
+.splide {
+  width: 80%; /* Increase the width of the carousel */
+  max-width: 1200px; /* Set a maximum width */
+  margin: auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.splide__slide {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:24px;
+  color: white;
+  height: 600px; /* Increase the height of the carousel */
+  background-size: cover;
+  background-position: center;
+}
+
+.slide-content {
+  position: absolute;
+  border-radius: 10px;
+  background-color: none;
+}
+.slide-content h2 {
+  background-color: rgba(130, 120, 120, 0.505);
+  padding: 6px 18px 6px 18px;
+  backdrop-filter: blur(4px);
+  font-size: 20px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  display: inline-block; /* Ensure the background adjusts to the text width */
+  max-width: 90%; /* Limit the width to prevent overflow */
+  text-align: center; /* Center text inside the element */
+}
+
+.slide-content a{
+  background-color: white;
+  border-radius: 18px;
+  color: black;
+  
+}
+
+.bottom-left {
+  bottom: 20px;
+  left: 20px;
+}
+
+.bottom-center {
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottom-right {
+  bottom: 20px;
+  right: 20px;
+}
+
+.center-left {
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-right {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.top-left {
+  top: 20px;
+  left: 20px;
+}
+
+.top-center {
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.top-right {
+  top: 20px;
+  right: 20px;
+}
+
+.slide-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #FFA62F;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+
+/* Navigation arrows */
+.splide__arrow {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.splide__arrow--prev {
+  left: 10px;
+}
+
+.splide__arrow--next {
+  right: 10px;
+}
+
+/* Pagination dots */
+.splide__pagination__page {
+  background: transparent;
+  width: 10px;
+  border: 2px white solid;
+  height: 10px;
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.splide__pagination__page.is-active {
+    width: 20px; 
+    margin-bottom: 9px; 
+    border-radius:5px;
+    height: 5px;
+    background-color: #f41d1d;
+    background: white;
+  
+}
+
+.splide {
+  position: relative;
+}
+
+.splide__arrows.custom-arrows {
+  position: absolute;
+  bottom: 20px; /* Adjust to position arrows vertically */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  z-index: 1; /* Ensure arrows are above the slides */
+}
+
+.splide__arrows.custom-arrows .splide__arrow {
+  background: none;
+  border: none;
+  color: #fff; /* Arrow color */
+  font-size: 24px; /* Adjust size of the icons */
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.splide__arrows.custom-arrows .splide__arrow:hover {
+  font-size: 26px; /* Change color on hover */
+}
+
+.splide__arrow--prev i,
+.splide__arrow--next i {
+  font-family: "FontAwesome";
+}
+
+/* Ensure the arrows are displayed correctly */
+.splide__arrow--prev i {
+  content: "\f104"; /* FontAwesome code for left arrow */
+}
+
+.splide__arrow--next i {
+  content: "\f105"; /* FontAwesome code for right arrow */
+}
+

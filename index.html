@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="dropdown-container">
+      <select id="position-dropdown">
+          <option value="bottom-left">Bottom Left</option>
+          <option value="bottom-center">Bottom Center</option>
+          <option value="bottom-right">Bottom Right</option>
+          <option value="center-left">Center Left</option>
+          <option value="center">Center</option>
+          <option value="center-right">Center Right</option>
+          <option value="top-left">Top Left</option>
+          <option value="top-center">Top Center</option>
+          <option value="top-right">Top Right</option>
+      </select>
+  </div>
+
+  <section class="splide" aria-label="Splide Dynamic Example">
+    <div class="splide__track">
+      <ul class="splide__list" id="slider-content">
+        <!-- Dynamic slides will be inserted here -->
+      </ul>
+    </div>
+    <div class="splide__arrows custom-arrows">
+      <button class="splide__arrow splide__arrow--prev">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="splide__arrow splide__arrow--next">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+    <div class="custom-pagination">
+      <!-- Custom pagination dots will be injected here -->
+    </div>
+  </section>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
