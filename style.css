@@ -30,8 +30,8 @@ body {
 }
 
 .splide {
-  width: 80%; /* Increase the width of the carousel */
-  max-width: 1200px; /* Set a maximum width */
+  width: 100%;
+  max-width: 100%;
   margin: auto;
   border-radius: 15px;
   overflow: hidden;
@@ -43,9 +43,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size:24px;
+  font-size: 24px;
   color: white;
-  height: 600px; /* Increase the height of the carousel */
+  height: 400px;
   background-size: cover;
   background-position: center;
 }
@@ -55,44 +55,44 @@ body {
   border-radius: 10px;
   background-color: none;
 }
+
 .slide-content h2 {
   background-color: rgba(130, 120, 120, 0.505);
-  padding: 6px 18px 6px 18px;
+  padding: 6px 18px;
   backdrop-filter: blur(4px);
   font-size: 20px;
   border: 2px solid rgb(255, 255, 255);
   border-radius: 20px;
-  display: inline-block; /* Ensure the background adjusts to the text width */
-  max-width: 90%; /* Limit the width to prevent overflow */
-  text-align: center; /* Center text inside the element */
+  display: inline-block;
+  max-width: 90%;
+  text-align: center;
 }
 
-.slide-content a{
+.slide-content a {
   background-color: white;
   border-radius: 18px;
   color: black;
-  
 }
 
 .bottom-left {
-  bottom: 20px;
-  left: 20px;
+  bottom: 10px;
+  left: 10px;
 }
 
 .bottom-center {
-  bottom: 20px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .bottom-right {
-  bottom: 20px;
-  right: 20px;
+  bottom: 10px;
+  right: 10px;
 }
 
 .center-left {
   top: 50%;
-  left: 20px;
+  left: 10px;
   transform: translateY(-50%);
 }
 
@@ -104,24 +104,24 @@ body {
 
 .center-right {
   top: 50%;
-  right: 20px;
+  right: 10px;
   transform: translateY(-50%);
 }
 
 .top-left {
-  top: 20px;
-  left: 20px;
+  top: 10px;
+  left: 10px;
 }
 
 .top-center {
-  top: 20px;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .top-right {
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
 }
 
 .slide-button {
@@ -135,14 +135,13 @@ body {
   font-size: 18px;
 }
 
-
 /* Navigation arrows */
 .splide__arrow {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
 .splide__arrow--prev {
@@ -164,13 +163,12 @@ body {
 }
 
 .splide__pagination__page.is-active {
-    width: 20px; 
-    margin-bottom: 9px; 
-    border-radius:5px;
-    height: 5px;
-    background-color: #f41d1d;
-    background: white;
-  
+  width: 20px;
+  margin-bottom: 9px;
+  border-radius: 5px;
+  height: 5px;
+  background-color: #f41d1d;
+  background: white;
 }
 
 .splide {
@@ -179,26 +177,26 @@ body {
 
 .splide__arrows.custom-arrows {
   position: absolute;
-  bottom: 20px; /* Adjust to position arrows vertically */
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
-  width: 20%;
-  z-index: 1; /* Ensure arrows are above the slides */
+  width: 45%;
+  z-index: 1;
 }
 
 .splide__arrows.custom-arrows .splide__arrow {
   background: none;
   border: none;
-  color: #fff; /* Arrow color */
-  font-size: 24px; /* Adjust size of the icons */
+  color: #fff;
+  font-size: 24px;
   margin: 0 10px;
   cursor: pointer;
 }
 
 .splide__arrows.custom-arrows .splide__arrow:hover {
-  font-size: 26px; /* Change color on hover */
+  font-size: 26px;
 }
 
 .splide__arrow--prev i,
@@ -208,10 +206,37 @@ body {
 
 /* Ensure the arrows are displayed correctly */
 .splide__arrow--prev i {
-  content: "\f104"; /* FontAwesome code for left arrow */
+  content: "\f104";
 }
 
 .splide__arrow--next i {
-  content: "\f105"; /* FontAwesome code for right arrow */
+  content: "\f105";
 }
 
+/* Tablet and above */
+@media (min-width: 768px) {
+  .splide {
+    width: 80%;
+    max-width: 1200px;
+  }
+
+  .splide__slide {
+    height: 600px;
+  }
+
+  .splide__arrow {
+    width: 20px;
+    height: 40px;
+  }
+  
+}
+
+/* Desktop and above */
+@media (min-width: 1024px) {
+  .splide__arrows.custom-arrows {
+    width: 15%;
+  }
+  .splide__arrows.custom-arrows {
+    width: 20%;
+  }
+}
