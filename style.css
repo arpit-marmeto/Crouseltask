@@ -182,7 +182,7 @@ body {
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
-  width: 45%;
+  width: 35%;
   z-index: 1;
 }
 
